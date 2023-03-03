@@ -1,0 +1,17 @@
+
+<div class="container">
+   <div ng-if="myInfoCtrl.userInfo.user">
+      <div class="user-details col-md-8">
+        <h3>{{myInfoCtrl.userInfo.user.firstname}} {{myInfoCtrl.userInfo.user.lastname}}</h3>
+        <div>{{myInfoCtrl.userInfo.user.email}}</div>
+        <div>{{myInfoCtrl.userInfo.user.phone}}</div>
+      </div>
+      <menu-item 
+          menu-item= "myInfoCtrl.userInfo.menuItem">
+      </menu-item> 
+   </div>
+    <div ng-if="!myInfoCtrl.userInfo" class="signup-error text-center">
+        <p>Not Signed Up Yet. &nbsp;&nbsp; <a ui-sref="public.signup">Sign Up Now!</a>
+        </p>
+    </div>   
+</div>
